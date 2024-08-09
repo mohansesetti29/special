@@ -19,14 +19,21 @@
 </body>
 <script>
     function viewmatter(){
+        document.querySelector('b').style.visibility = "visible";
         let txt = document.querySelector('h1');
         let data = txt.innerHTML;
         console.log(data);
         txt.innerHTML = '';
         txt.style.visibility = "visible";
-        for(i=0;i<data.length;i++){
-            txt.innerHTML += data[i];
-        }
+        let idx=0;
+        function typer(){
+            if(idx < data.length){
+                txt.innerHTML += data[idx];
+                idx++;
+            }
+            setTimeout(typer, 100);
+            }
+        typer();
         document.querySelector('button').innerHTML = "<a href='mohan.html'>again</a>";
     }
 </script>
