@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Special</title>
+</head>
+<body>
+    <div class="forimg">
+        <div class="matter">
+            <div style="text-align: center; margin: 30px; transition: 1.5s;">
+                <h1>To a sweet soul, you deserve every good thing that comes your way.</h1>
+                <b>|</b>
+            </div>
+        <button type="button" onclick="viewmatter()">click me</button>
+        </div>
+    </div>
+</body>
+<script>
+    function viewmatter(){
+        let txt = document.querySelector('h1');
+        let data = txt.innerHTML;
+        console.log(data);
+        txt.innerHTML = '';
+        txt.style.visibility = "visible";
+        for(i=0;i<data.length;i++){
+            txt.innerHTML += data[i];
+        }
+        document.querySelector('button').innerHTML = "<a href='mohan.html'>again</a>";
+    }
+</script>
+</html>
