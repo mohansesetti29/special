@@ -29,6 +29,7 @@ h1{
     display: inline;
 }
 b{
+    color: white;
     display: inline;
     visibility: hidden;
     font-size: 30px;
@@ -37,7 +38,7 @@ b{
 
 @keyframes blink-caret {
     from, to { color: transparent; }
-    50% { color: black; }
+    50% { color: white; }
 }
 button{
     font-size: 22px;
